@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src='https://cdn.jsdelivr.net/npm/vue'></script>
+    <title>Vue Hello World</title>
+</head>
+<body>
+    <div id="app">
+        <p>{{ title }}</p>
+    </div>
+
+    <script>
+        //defines a new vue instance whihc takes an object as a parameter
+        new Vue({
+            //defines the dom element for vue to control
+            el: '#app',
+            //defines the view properties to be used within the vue template or instance
+            data: {
+                title: 'Hello World!'
+            }
+        });
+    </script>
+</body>
+</html>
