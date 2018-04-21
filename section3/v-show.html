@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-show</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>You can see me!</p>
+        <p v-if="show">Do you also see me?</p>
+        <p v-show="show">Now you see me!</p>
+        <template v-if="show">
+            <h1>heading</h1>
+            <p>Inside a template</p>
+        </template>
+        <button @click="show = !show">switch</button>
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                show: true
+            }
+        });
+    </script>
+</body>
+
+</html>

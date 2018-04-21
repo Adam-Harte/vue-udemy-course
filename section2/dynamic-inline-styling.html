@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dynamic Inline Styling</title>
+    <script src='https://cdn.jsdelivr.net/npm/vue'></script>
+    <style>
+        .demo {
+            width: 100px;
+            height: 100px;
+            background-color: grey;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="demo" :style='{backgroundColor: color}'></div>
+        <div class="demo"></div>
+        <div class="demo"></div>
+
+        <hr>
+
+        <input type="text" v-model='color'>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                color: 'gray'
+            }
+        });    
+    </script>
+</body>
+
+</html>
