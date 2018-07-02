@@ -26,11 +26,13 @@
 <script>
     export default {
         data () {
-            user: {
-                username: '',
-                email: ''
-            },
-            users: []
+            return {
+                user: {
+                    username: '',
+                    email: ''
+                },
+                users: []
+            }
         },
         methods: {
             submit () {
